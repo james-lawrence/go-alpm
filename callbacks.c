@@ -9,9 +9,6 @@
 #include <stdarg.h>
 #include <alpm.h>
 
-void logCallback(alpm_loglevel_t level, char *cstring);
-void questionCallback(alpm_question_t *question);
-
 void go_alpm_log_cb(alpm_loglevel_t level, const char *fmt, va_list arg) {
   char *s = malloc(128);
   if (s == NULL) return;
